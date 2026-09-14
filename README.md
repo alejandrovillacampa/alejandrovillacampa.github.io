@@ -1,6 +1,6 @@
-# alexvilla000.github.io
+# alejandrovillacampa.github.io
 
-Personal portfolio served with GitHub Pages at https://alexvilla000.github.io.
+Personal portfolio served with GitHub Pages at https://alejandrovillacampa.github.io.
 Static HTML/CSS/JS, no build step.
 
 ## Structure
