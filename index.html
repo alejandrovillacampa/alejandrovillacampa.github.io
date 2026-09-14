@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alex Villa · Software de simulación</title>
+  <meta name="description" content="Portfolio de Alex Villa: solvers numéricos, herramientas de ingeniería y aplicaciones web.">
+  <script>
+    // Apply saved theme before first paint to avoid a flash
+    try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top">alex villa</a>
+      <nav aria-label="Principal">
+        <ul class="nav">
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#experiencia">Experiencia</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Cambiar tema claro u oscuro">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z" fill="currentColor"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <h1 class="name">Alex<br>Villa</h1>
+          <p class="role">Ingeniero de software especializado en simulación</p>
+          <p class="lede">Escribo solvers de flujo, las APIs que los exponen y las interfaces con las que los equipos de ingeniería los usan a diario.</p>
+          <div class="cta">
+            <a class="btn btn-primary" href="#proyectos">Ver proyectos</a>
+            <a class="btn btn-ghost" href="#contacto">Escribirme</a>
+          </div>
+        </div>
+
+        <figure class="network" aria-label="Diagrama de una red de conductos con flujo animado">
+          <svg viewBox="0 0 520 420" role="img">
+            <title>Red de conductos</title>
+            <g class="pipes">
+              <path id="p1" d="M20 210 H180"/>
+              <path id="p2" d="M180 210 V90 H340"/>
+              <path id="p3" d="M180 210 H340"/>
+              <path id="p4" d="M180 210 V330 H300"/>
+              <path id="p5" d="M340 90 H500"/>
+              <path id="p6" d="M340 210 V90"/>
+              <path id="p7" d="M340 210 H500"/>
+              <path id="p8" d="M300 330 H500"/>
+              <path id="p9" d="M300 330 V210"/>
+            </g>
+            <g class="flow">
+              <use href="#p1"/><use href="#p2" class="slow"/><use href="#p3"/><use href="#p4" class="slow"/>
+              <use href="#p5"/><use href="#p7"/><use href="#p8" class="slow"/>
+            </g>
+            <g class="nodes">
+              <circle cx="20" cy="210" r="7" class="inlet"/>
+              <circle cx="180" cy="210" r="9"/>
+              <circle cx="340" cy="90" r="7"/>
+              <circle cx="340" cy="210" r="7"/>
+              <circle cx="300" cy="330" r="7"/>
+              <circle cx="500" cy="90" r="6" class="outlet"/>
+              <circle cx="500" cy="210" r="6" class="outlet"/>
+              <circle cx="500" cy="330" r="6" class="outlet"/>
+            </g>
+            <g class="labels">
+              <text x="20" y="190">entrada</text>
+              <text x="190" y="235">N1</text>
+              <text x="350" y="115">N2</text>
+              <text x="350" y="235">N3</text>
+              <text x="310" y="355">N4</text>
+              <text x="440" y="75">42,1 m³/s</text>
+              <text x="440" y="195">18,7 m³/s</text>
+              <text x="440" y="315">23,4 m³/s</text>
+            </g>
+          </svg>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="proyectos" aria-labelledby="proyectos-h">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="proyectos-h">Proyectos</h2>
+          <div class="filters" role="group" aria-label="Filtrar por tecnología"></div>
+        </div>
+        <ul class="projects" aria-live="polite"></ul>
+      </div>
+    </section>
+
+    <section class="section" id="sobre-mi" aria-labelledby="sobre-h">
+      <div class="wrap about">
+        <h2 id="sobre-h">Sobre mí</h2>
+        <div class="about-body">
+          <p>Empecé en ingeniería mecánica calculando redes de ventilación con hojas de cálculo y acabé escribiendo el software que las sustituyó. Hoy me muevo entre los dos mundos: discretizaciones y esquemas numéricos por un lado, arquitectura de software y producto por otro.</p>
+          <p>Me interesan los problemas donde la física y la experiencia de uso importan a la vez: un solver correcto que nadie sabe configurar no resuelve nada.</p>
+          <dl class="stack">
+            <div><dt>Lenguajes</dt><dd>C++17, Python, TypeScript, Rust</dd></div>
+            <div><dt>Numérico</dt><dd>Volúmenes finitos, Runge-Kutta, NumPy, Eigen</dd></div>
+            <div><dt>Web</dt><dd>React, FastAPI, PostgreSQL</dd></div>
+            <div><dt>Infra</dt><dd>Docker, GitHub Actions, Linux</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experiencia" aria-labelledby="exp-h">
+      <div class="wrap">
+        <h2 id="exp-h">Experiencia</h2>
+        <ol class="timeline">
+          <li>
+            <span class="when">2023 – hoy</span>
+            <div>
+              <h3>Senior Software Engineer, Aerodyne Tunnels</h3>
+              <p>Lidero el desarrollo del motor de simulación de ventilación en túneles y su API. Reduje el tiempo de cálculo de escenarios de incendio de 40 a 6 minutos.</p>
+            </div>
+          </li>
+          <li>
+            <span class="when">2020 – 2023</span>
+            <div>
+              <h3>Software Engineer, Fluxia Engineering</h3>
+              <p>Construí la herramienta web de diseño de redes de conductos que usan más de 300 ingenieros.</p>
+            </div>
+          </li>
+          <li>
+            <span class="when">2018 – 2020</span>
+            <div>
+              <h3>Ingeniero de cálculo, Norvent</h3>
+              <p>Dimensionado de sistemas de ventilación y automatización de los cálculos con Python.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section contact" id="contacto" aria-labelledby="contacto-h">
+      <div class="wrap">
+        <h2 id="contacto-h">Contacto</h2>
+        <p class="contact-lede">¿Tienes un solver que nadie quiere tocar o una herramienta interna que se ha quedado corta? Cuéntamelo.</p>
+        <a class="mail" href="mailto:hola@example.com">hola@example.com</a>
+        <ul class="social">
+          <li><a href="https://github.com/alexvilla000">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
+          <li><a href="#" aria-disabled="true">CV (PDF)</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">© <span id="year"></span> Alex Villa. Hecho a mano y servido con GitHub Pages.</div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
